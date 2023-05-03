@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title></title>
+</head>
+	<img src="CLOCK.png" width="50" height="50"><h1 style="font-family:Garamond;color:white;"><span style="background-color:seagreen;">Time converter</span></h1>
+<body style="background-color:skyblue;">
+
+	<form>
+	<label><h1 style="background-color:orange;">Enter Seconds:</h1></label>
+	<br>
+	<input type="number" name="seconds" id="seconds">
+	<br>
+	<label><h1 style="background-color:orange;">Enter Minutes:</h1></label>
+	<br>
+	<input type="number" name="minutes" id="minutes">
+	<br>
+	<label><h1 style="background-color:orange;">Enter Hours:</h1></label>
+	<br>
+	<input type="number" name="hours" id="hours">
+	<br>
+	<label><h1 style="background-color:orange;">Enter Days:</h1></label>
+	<br>
+	<input type="number" name="days" id="days">
+	<br>
+	<br>
+	<br>
+	<button style="background-color: royalblue;"type="submit" onclick="Compute()"><h1>Calculate</h1></button>
+	</form>
+
+<script>
+	function Compute() {
+		var seconds = document.getElementById("seconds").value;
+		let Minutes = seconds / 60;
+		let Hours = seconds / 3600;
+		let Days = seconds / 86400;
+		window.alert("The Minutes is: " + Minutes + "\n"+"The Hours is: " + Hours + "\n"+"The Days is: " + Days);
+		var minutes = document.getElementById("minutes").value;
+		let Seconds = minutes * 60;
+		let HOurs = minutes / 60;
+		let DAys = minutes / 1440;
+		window.alert("The Seconds is: " + Seconds + "\n"+"The HOurs is: " + HOurs + "\n"+"The DAys is: " + DAys);
+		var hours = document.getElementById("hours").value;
+		let SEconds = hours * 3600;
+		let MInutes = hours * 60;
+		let DAYs = hours / 24;
+		window.alert("The SEconds is: " + SEconds + "\n"+"The MInutes is: " + MInutes + "\n"+"The DAYs is: " + DAYs);
+		var days = document.getElementById("days").value;
+		let SEConds = days * 86400;
+		let MINutes = days * 1440;
+		let HOUrs = days * 24;
+		window.alert("The SEConds is: " + SEConds + "\n"+"The MINutes is: " + MINutes + "\n"+"The HOUrs is: " + HOUrs);
+	}
+</script>
+
+</body>
+</html>
